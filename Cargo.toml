@@ -1,6 +1,6 @@
 [package]
 name = "sshtether"
-version = "0.1.5"
+version = "0.1.6"
 edition = "2021"
 rust-version = "1.89"
 authors = ["Hadi Cahyadi <cumulus13@gmail.com>"]
@@ -8,7 +8,6 @@ description = "Remote command runner over SSH that stays tethered: PTY, colour, 
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/cumulus13/sshtether"
-homepage = "https://github.com/cumulus13/sshtether"
 documentation = "https://docs.rs/sshtether"
 keywords = ["ssh", "remote", "reconnect", "cli", "terminal"]
 categories = ["command-line-utilities", "network-programming"]
