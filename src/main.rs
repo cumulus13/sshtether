@@ -5,6 +5,7 @@
 // License: MIT
 
 use clap::{CommandFactory, Parser};
+use clap_version_flag::colorful_version;
 use sshtether::cli::Cli;
 use sshtether::command::build_remote_command;
 use sshtether::config::load_servers;
@@ -17,7 +18,12 @@ use std::process::ExitCode;
 use std::time::Duration;
 
 fn main() -> ExitCode {
-    if std::env::args_os().len() == 1 {
+    let args: Vec<String> = std::env::args_os().collect();
+    if args.len() == 2 && (args[1] == "-V" || args[1] == "--version") {
+        let version = colorful_version!();
+        version.print_and_exit();
+    }
+    if args.len() == 1 {
         let _ = Cli::command().print_help();
         return ExitCode::SUCCESS;
     }

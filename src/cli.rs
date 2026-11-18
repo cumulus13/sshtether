@@ -7,6 +7,7 @@
 //! Command-line interface definition.
 
 use clap::{Parser, ValueEnum};
+use clap_color_help::default_styles;
 use std::path::PathBuf;
 
 /// How long to keep trying before giving up.
@@ -52,7 +53,8 @@ pub enum Persist {
     after_help = "Escape sequences (start of a line):  ~. quit   ~? help   ~~ literal ~\n\
                   Exit codes: remote command's own code | 0 on ~. | 1 local error | \
                   130 Ctrl+C | 255 gave up",
-    override_usage = "sshtether [OPTIONS] [--] <COMMAND>..."
+    override_usage = "sshtether [OPTIONS] [--] <COMMAND>...",
+    styles=default_styles()
 )]
 pub struct Cli {
     /// 'infinity'/'1' keep trying forever; 'max'/'0' give up after --max-retries
