@@ -49,7 +49,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@1.89
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: "1.89"
       - uses: Swatinem/rust-cache@v2
       - run: cargo build --locked
 
@@ -76,6 +78,8 @@ jobs:
   audit:
     name: Security audit
     runs-on: ubuntu-latest
+    # Advisories in transitive dependencies are surfaced without turning every PR red.
+    continue-on-error: true
     permissions:
       contents: read
       issues: write

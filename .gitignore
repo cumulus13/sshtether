@@ -10,3 +10,21 @@
 
 # Added entries (1 items)
 config.toml
+
+# Added entries (1 items)
+*.bak
+
+# Added entries (13 items)
+downloads/
+download/
+.pt/
+gitignore_backup/
+gitignore_backups/
+src/tmp*
+tmp*
+PLAN.md
+CLAUDE.md
+ERROR*
+ANSWER*
+__pycache__/
+*egg-info*/

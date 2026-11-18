@@ -285,14 +285,15 @@ mod tests {
         }
 
         fn count_procs(marker: &str) -> usize {
-            // Count only real `sleep` processes, not the sh wrappers whose argv mentions the text.
-            let out = Command::new("pgrep")
-                .args(["-x", "sleep", "-a"])
+            // Portable (Linux + macOS): list every command line and count exact matches,
+            // so the `sh -c` wrappers whose argv merely mention the text are not counted.
+            let out = Command::new("ps")
+                .args(["-A", "-o", "args="])
                 .output()
                 .unwrap();
             String::from_utf8_lossy(&out.stdout)
                 .lines()
-                .filter(|l| l.ends_with(marker.trim_start_matches("sleep ")))
+                .filter(|l| l.trim() == marker)
                 .count()
         }
     }
