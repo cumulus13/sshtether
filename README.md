@@ -4,6 +4,14 @@
 [![Crates.io](https://img.shields.io/crates/v/sshtether.svg)](https://crates.io/crates/sshtether)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/cumulus13/sshtether/master/logo.png?raw=true" width="300" alt="Logo">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/cumulus13/sshtether/master/demo.gif?raw=true" width="300" alt="Demo">
+</p>
+
 A remote command runner over SSH that **stays tethered**. Run any command on a
 server with a real terminal (PTY, colours, UTF-8, window resizing) and let
 `sshtether` deal with everything that breaks a plain `ssh`: failed connects,
