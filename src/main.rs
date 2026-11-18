@@ -18,12 +18,12 @@ use std::process::ExitCode;
 use std::time::Duration;
 
 fn main() -> ExitCode {
-    let args: Vec<String> = std::env::args_os().collect();
+    let args: Vec<String> = std::env::args().collect();
     if args.len() == 2 && (args[1] == "-V" || args[1] == "--version") {
         let version = colorful_version!();
         version.print_and_exit();
     }
-    if args.len() == 1 {
+    if std::env::args_os().len() == 1 {
         let _ = Cli::command().print_help();
         return ExitCode::SUCCESS;
     }
