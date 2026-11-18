@@ -1,0 +1,18 @@
+# sshtether server list.
+# Copy to ~/.config/sshtether/config.toml (Linux/macOS/Windows) or pass --config.
+# Servers are tried in order; on failure sshtether fails over to the next one.
+# Unknown keys are rejected so a typo cannot silently fall back to a default.
+
+[[server]]
+name     = "Primary"
+hostname = "203.0.113.10"
+username = "root"
+port     = 22
+key_file = "~/.ssh/id_ed25519"        # ~, $VAR, ${VAR} (and %VAR% on Windows) are expanded
+
+[[server]]
+name      = "Backup"
+hostname  = "backup.example.com"
+username  = "deploy"
+key_files = ["~/.ssh/id_ed25519", "~/.ssh/id_rsa"]   # tried in order
+# password = "..."     # prefer the SSHTETHER_PASSWORD environment variable

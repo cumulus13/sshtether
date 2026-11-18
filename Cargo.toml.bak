@@ -1,0 +1,54 @@
+[package]
+name = "sshtether"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.89"
+authors = ["Hadi Cahyadi <cumulus13@gmail.com>"]
+description = "Remote command runner over SSH that stays tethered: PTY, colour, UTF-8, auto-reconnect, failover and dead-peer detection"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/cumulus13/sshtether"
+homepage = "https://github.com/cumulus13/sshtether"
+documentation = "https://docs.rs/sshtether"
+keywords = ["ssh", "remote", "reconnect", "cli", "terminal"]
+categories = ["command-line-utilities", "network-programming"]
+exclude = [".github/", "dist/", "*.zip"]
+
+[[bin]]
+name = "sshtether"
+path = "src/main.rs"
+
+[dependencies]
+russh = { version = "0.65", default-features = false, features = ["ring", "flate2", "rsa"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "time", "sync", "signal", "io-util", "io-std"] }
+clap = { version = "4", features = ["derive", "env", "wrap_help"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.9"
+thiserror = "2"
+anyhow = "1"
+crossterm = "0.29"
+socket2 = { version = "0.6", features = ["all"] }
+rpassword = "7"
+rand = "0.9"
+sha1 = "0.10"
+dirs = "6"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+shell-words = "1"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = ["Win32_Foundation", "Win32_System_Console"] }
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+strip = true
+opt-level = 3
+
+[dev-dependencies]
+tempfile = "3"
+# russh 0.65 uses rand 0.10 for key generation; keep it separate from our rand 0.9.
+rand10 = { package = "rand", version = "0.10", features = ["thread_rng"] }

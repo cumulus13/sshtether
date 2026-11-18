@@ -1,0 +1,12 @@
+/target
+/dist
+*.zip
+*.pid
+.DS_Store
+
+# Ignore Sublime Text project files
+*.sublime-project
+*.sublime-workspace
+
+# Added entries (1 items)
+config.toml
