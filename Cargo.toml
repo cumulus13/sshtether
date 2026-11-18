@@ -31,7 +31,7 @@ crossterm = "0.29"
 socket2 = { version = "0.6", features = ["all"] }
 rpassword = "7"
 rand = "0.9"
-sha1 = "0.10"
+sha1 = "0.11"
 dirs = "6"
 chrono = { version = "0.4", default-features = false, features = ["clock"] }
 shell-words = "1"
