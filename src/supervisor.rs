@@ -1,3 +1,9 @@
+// File: sshtether/src/supervisor.rs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-11-18 14:35:08 SE Asia Standard Time
+// Description:
+// License: MIT
+
 //! The connect → run → reconnect loop, with failover between servers and
 //! jittered exponential backoff.
 

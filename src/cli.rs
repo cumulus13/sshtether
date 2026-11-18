@@ -1,3 +1,9 @@
+// File: sshtether/src/cli.rs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-11-18 14:35:08 SE Asia Standard Time
+// Description:
+// License: MIT
+
 //! Command-line interface definition.
 
 use clap::{Parser, ValueEnum};

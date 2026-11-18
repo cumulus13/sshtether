@@ -1,3 +1,9 @@
+// File: sshtether/src/main.rs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-11-18 14:35:08 SE Asia Standard Time
+// Description:
+// License: MIT
+
 use clap::{CommandFactory, Parser};
 use sshtether::cli::Cli;
 use sshtether::command::build_remote_command;

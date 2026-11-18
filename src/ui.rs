@@ -1,3 +1,9 @@
+// File: sshtether/src/ui.rs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-11-18 14:35:08 SE Asia Standard Time
+// Description:
+// License: MIT
+
 //! Timestamped, optionally coloured diagnostics on **stderr**.
 //!
 //! Nothing here is ever printed while the terminal is in raw mode, and remote

@@ -1,3 +1,9 @@
+// File: sshtether/src/connection.rs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-11-18 14:35:08 SE Asia Standard Time
+// Description:
+// License: MIT
+
 //! SSH connection establishment: TCP tuning, host-key policy and authentication.
 //!
 //! Authentication order mirrors OpenSSH/paramiko: every configured key file,

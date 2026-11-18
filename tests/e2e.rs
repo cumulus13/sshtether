@@ -1,3 +1,9 @@
+// File: sshtether/tests/e2e.rs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-11-18 14:35:08 SE Asia Standard Time
+// Description:
+// License: MIT
+
 //! End-to-end tests against an in-process russh SSH server.
 //!
 //! The server understands a tiny command language so each scenario can be

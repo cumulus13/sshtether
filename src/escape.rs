@@ -1,3 +1,9 @@
+// File: sshtether/src/escape.rs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-11-18 14:35:08 SE Asia Standard Time
+// Description:
+// License: MIT
+
 //! OpenSSH-style escape sequences, recognised only at the start of a line.
 
 /// What the user asked for with an escape sequence.

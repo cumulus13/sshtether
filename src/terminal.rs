@@ -1,3 +1,9 @@
+// File: sshtether/src/terminal.rs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-11-18 14:35:08 SE Asia Standard Time
+// Description:
+// License: MIT
+
 //! Local terminal handling: raw mode, non-blocking keyboard input, size and
 //! cleanup after a remote application died while holding the terminal.
 

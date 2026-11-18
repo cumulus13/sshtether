@@ -1,3 +1,9 @@
+// File: sshtether/src/session.rs
+// Author: Hadi Cahyadi <cumulus13@gmail.com>
+// Date: 2026-11-18 14:35:08 SE Asia Standard Time
+// Description:
+// License: MIT
+
 //! One connected run of the remote command: PTY allocation, bidirectional I/O
 //! pumping, window-resize forwarding and classification of how the run ended.
 
