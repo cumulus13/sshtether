@@ -32,7 +32,7 @@ socket2 = { version = "0.6", features = ["all"] }
 rpassword = "7"
 rand = "0.9"
 sha1 = "0.10"
-dirs = "6"
+dirs = "7"
 chrono = { version = "0.4", default-features = false, features = ["clock"] }
 shell-words = "1"
 
